@@ -2,9 +2,6 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Router } from '../routes'
 import ErrorMessage from './ErrorMessage'
-import PostVoteUp from './PostVoteUp'
-import PostVoteDown from './PostVoteDown'
-import PostVoteCount from './PostVoteCount'
 
 const POSTS_PER_PAGE = 10
 
@@ -36,9 +33,6 @@ function PostList ({
                 >
                   {post.Title}
                 </a>
-                <PostVoteUp id={post.id} votes={post.votes} />
-                <PostVoteCount votes={post.votes} />
-                <PostVoteDown id={post.id} votes={post.votes} />
               </div>
             </li>
           ))}
@@ -108,6 +102,8 @@ export const allPosts = gql`
       Description
       Data
       URL
+      createdAt
+      updatedAt
     }
   }
 `
