@@ -11,11 +11,11 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/blog/entry": [
+    "/blog": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/blog": [
+    "/blog/entry": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

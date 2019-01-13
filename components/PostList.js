@@ -17,6 +17,7 @@ function PostList ({
   data: { loading, error, allPosts, _allPostsMeta, webs },
   loadMorePosts
 }) {
+  console.log(webs)
   if (error) return <ErrorMessage message='Error loading posts.' />
   if (webs && webs.length) {
     const areMorePosts = false
@@ -28,8 +29,8 @@ function PostList ({
               <div>
                 <span>{index + 1}. </span>
                 <a
-                  href={`/blog/${post.Title}`}
-                  onClick={event => handleClick(event, post.id)}
+                  href={`/blog/${post._id}`}
+                  onClick={event => handleClick(event, post._id)}
                 >
                   {post.Title}
                 </a>
@@ -92,6 +93,7 @@ function PostList ({
 export const allPosts = gql`
   query {
     webs {
+      _id
       Title
       Image {
         url
