@@ -8,9 +8,10 @@ const POSTS_PER_PAGE = 10
 function handleClick (event, id) {
   event.preventDefault()
   // With route name and params
-  // Router.pushRoute('blog/entry', { id: id })
+  Router.pushRoute('blog/entry', { id: id })
   // With route URL
-  Router.pushRoute(`/blog/${id}`)
+  // Router.pushRoute(`/blog/${id}`)
+  console.log(Router)
 }
 
 function PostList ({

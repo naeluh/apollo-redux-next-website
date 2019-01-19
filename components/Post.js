@@ -7,18 +7,21 @@ import PostVoteUp from './PostVoteUp'
 import PostVoteDown from './PostVoteDown'
 import PostVoteCount from './PostVoteCount'
 
-function Post({ id, data: { error, Post } }) {
+function Post({ data: { error, web } }) {
+  console.log(web)
   if (error) return <ErrorMessage message='Error loading blog post.' />
-  if (Post) {
+  if (web) {
     return (
       <section>
-        <div key={Post.id}>
-          <h1>{Post.title}</h1>
+        <div key={web.id}>
+          <h1>{web.Title}</h1>
           <p>
-            ID: {Post.id}
+            ID: {web._id}
             <br />
-            URL: {Post.url}
+            URL: {web.URL}
           </p>
+          <p>{web.Description}</p>
+          <p><img src={ web.Image !== null ? `https://strapi.hulea.org/${web.Image.url}` : '' } /></p>
           <span>
             <PostVoteUp id={Post.id} votes={Post.votes} />
             <PostVoteCount votes={Post.votes} />
@@ -31,6 +34,10 @@ function Post({ id, data: { error, Post } }) {
             font-size: 14px;
             margin-right: 5px;
           }
+          img {
+            width: 100%;
+            height: auto;
+          }
         `}</style>
       </section>
     )
@@ -42,6 +49,18 @@ const post = gql`
   query web($id: ID!) {
     web(id: $id) {
       Title
+      _id
+      Image {
+        url
+        ext
+        provider
+        size
+      }
+      Description
+      Data
+      URL
+      createdAt
+      updatedAt
     }
   }
 `
