@@ -5,16 +5,16 @@ import ErrorMessage from './ErrorMessage'
 
 const POSTS_PER_PAGE = 10
 
-function handleClick (event, id) {
+function handleClick(event, id, url) {
   event.preventDefault()
   // With route name and params
-  Router.pushRoute('blog/entry', { id: id })
+  Router.pushRoute('blog/entry', { url: url, id: id })
   // With route URL
-  // Router.pushRoute(`/blog/${id}`)
+  // Router.push(`/blog/${url}`)
   console.log(Router)
 }
 
-function PostList ({
+function PostList({
   data: { loading, error, allPosts, _allPostsMeta, webs },
   loadMorePosts
 }) {
@@ -24,29 +24,24 @@ function PostList ({
     const areMorePosts = false
     return (
       <section>
-        <ul>
           {webs.map((post, index) => (
-            <li key={index + 1}>
-              <div>
-                <span>{index + 1}. </span>
+              <span key={index + 1}>
                 <a
                   href={`/blog/${post._id}`}
-                  onClick={event => handleClick(event, post._id)}
+                  onClick={event => handleClick(event, post._id, post.Data.Link)}
                 >
-                  {post.Title}
+                  {post.Title} <span>/{post.Data.Link}</span>
                 </a>
-              </div>
-            </li>
+              </span>
           ))}
-        </ul>
         {areMorePosts ? (
           <button onClick={() => loadMorePosts()}>
             {' '}
             {loading ? 'Loading...' : 'Show More'}{' '}
           </button>
         ) : (
-          ''
-        )}
+            ''
+          )}
         <style jsx>{`
           section {
             padding-bottom: 20px;

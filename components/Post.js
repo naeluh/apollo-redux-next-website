@@ -1,5 +1,5 @@
 import React from 'react'
-import { withRouter } from 'next/router'
+import { withRouter, router } from 'next/router'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
@@ -8,9 +8,10 @@ import PostVoteDown from './PostVoteDown'
 import PostVoteCount from './PostVoteCount'
 
 function Post({ data: { error, web } }) {
-  console.log(web)
+  console.log(router)
   if (error) return <ErrorMessage message='Error loading blog post.' />
   if (web) {
+    // Router.replace(`/blog/${web.Data.Link}`)
     return (
       <section>
         <div key={web.id}>
