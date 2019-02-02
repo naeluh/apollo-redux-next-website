@@ -7,8 +7,30 @@ const POSTS_PER_PAGE = 10
 
 function handleClick(event, id, url) {
   event.preventDefault()
+
+    /
+    Router.beforePopState(({ url, as, options }) => {
+      // I only want to allow these two routes!
+      if (as !== "/" || as !== "/other") {
+        // Have SSR render bad routes as a 404.
+        window.location.href = as
+        return false
+      }
+
+      return true
+    });
+
+
   // With route name and params
-  Router.pushRoute('blog/entry', { url: url, id: id })
+  Router.push({
+    pathname: `/blog/${id}`,
+    asPath: `/blog/${url}`,
+    query: {
+      id: id
+    }
+  });
+
+  /*   Router.push(`/blog?id=${id}`, `/blog/${url}`) */
   // With route URL
   // Router.push(`/blog/${url}`)
   console.log(Router)
@@ -24,16 +46,17 @@ function PostList({
     const areMorePosts = false
     return (
       <section>
-          {webs.map((post, index) => (
-              <span key={index + 1}>
-                <a
-                  href={`/blog/${post._id}`}
-                  onClick={event => handleClick(event, post._id, post.Data.Link)}
-                >
-                  {post.Title} <span>/{post.Data.Link}</span>
-                </a>
-              </span>
-          ))}
+        {webs.map((post, index) => (
+          <span key={index + 1}>
+            <a
+              props={post._id}
+              href={`/blog/${post.Data.Link}`}
+              onClick={event => handleClick(event, post._id, post.Data.Link)}
+            >
+              {post.Title} <span>/{post.Data.Link}</span>
+            </a>
+          </span>
+        ))}
         {areMorePosts ? (
           <button onClick={() => loadMorePosts()}>
             {' '}

@@ -14,6 +14,7 @@
     "graphql-tag": "^2.5.0",
     "isomorphic-unfetch": "^2.0.0",
     "next": "7.0.2",
+    "next-link": "^2.0.0",
     "next-redux-saga": "^1.0.0",
     "next-redux-wrapper": "^1.3.5",
     "next-routes": "^1.2.0",
