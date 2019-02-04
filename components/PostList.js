@@ -8,7 +8,7 @@ const POSTS_PER_PAGE = 10
 function handleClick(event, id, url) {
   event.preventDefault()
 
-    /
+    
     Router.beforePopState(({ url, as, options }) => {
       // I only want to allow these two routes!
       if (as !== "/" || as !== "/other") {
@@ -23,24 +23,21 @@ function handleClick(event, id, url) {
 
   // With route name and params
   Router.push({
-    pathname: `/blog/${id}`,
-    asPath: `/blog/${url}`,
-    query: {
-      id: id
-    }
+    pathname: `/project/${url}`,
+    asPath: `/project/${url}`
   });
 
-  /*   Router.push(`/blog?id=${id}`, `/blog/${url}`) */
+  /*   Router.push(`/project?id=${id}`, `/project/${url}`) */
   // With route URL
-  // Router.push(`/blog/${url}`)
-  console.log(Router)
+  // Router.push(`/project/${url}`)
+  // console.log(Router)
 }
 
 function PostList({
   data: { loading, error, allPosts, _allPostsMeta, webs },
   loadMorePosts
 }) {
-  console.log(webs)
+  //  console.log(webs)
   if (error) return <ErrorMessage message='Error loading posts.' />
   if (webs && webs.length) {
     const areMorePosts = false
@@ -50,7 +47,7 @@ function PostList({
           <span key={index + 1}>
             <a
               props={post._id}
-              href={`/blog/${post.Data.Link}`}
+              href={`/project/${post.Data.Link}`}
               onClick={event => handleClick(event, post._id, post.Data.Link)}
             >
               {post.Title} <span>/{post.Data.Link}</span>

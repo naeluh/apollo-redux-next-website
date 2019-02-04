@@ -5,4 +5,4 @@
  **/
 const routes = (module.exports = require('next-routes')())
 
-routes.add('blog/entry', '/blog/:url')
+routes.add('project/entry', '/project/:url')

@@ -5,43 +5,20 @@ import { withRouter } from 'next/router'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
-import PostVoteUp from './PostVoteUp'
-import PostVoteDown from './PostVoteDown'
-import PostVoteCount from './PostVoteCount'
 
-function Post({ data: { error, web } }) {
-  console.log(web)
+function Post({ data: { error, webs } }) {
+  let web = webs[0]
   if (error) return <ErrorMessage message='Error loading blog post.' />
   if (web) {
-    // Router.replace(`/blog/${web.Data.Link}`)
     return (
       <section>
         <div key={web.id}>
           <h1>{web.Title}</h1>
-          <p>
-            ID: {web._id}
-            <br />
-            URL: {web.URL}
-          </p>
           <p>{web.Description}</p>
-          <p><img src={ web.Image !== null ? `https://strapi.hulea.org/${web.Image.url}` : '' } /></p>
-          <span>
-            <PostVoteUp id={Post.id} votes={Post.votes} />
-            <PostVoteCount votes={Post.votes} />
-            <PostVoteDown id={Post.id} votes={Post.votes} />
-          </span>
+          <figure>
+            <img src={web.Image !== null ? `https://strapi.hulea.org/${web.Image.url}` : ''} />
+          </figure>
         </div>
-        <style jsx>{`
-          span {
-            display: flex;
-            font-size: 14px;
-            margin-right: 5px;
-          }
-          img {
-            width: 100%;
-            height: auto;
-          }
-        `}</style>
       </section>
     )
   }
@@ -49,8 +26,8 @@ function Post({ data: { error, web } }) {
 }
 
 const post = gql`
-  query web($id: ID!) {
-    web(id: $id) {
+  query webs($url: String!) {
+    webs( where: { URL: $url }, limit: 1) {
       Title
       _id
       Image {
@@ -73,7 +50,7 @@ const post = gql`
 const ComponentWithMutation = graphql(post, {
   options: ({ router: { query } }) => ({
     variables: {
-      id: query.id
+      url: query.url
     }
   }),
   props: ({ data }) => ({
