@@ -9,8 +9,13 @@ import { loadData } from '../lib/placeholder/actions'
 import App from '../components/App'
 import Header from '../components/Header'
 import Page from '../components/Page'
+import Home from '../components/Home'
 
 class PageIndex extends React.Component {
+  state = {
+    isActive: true
+  }
+
   static async getInitialProps ({ store }) {
     store.dispatch(countIncrease())
     if (!store.getState().placeholder.data) {
@@ -26,7 +31,7 @@ class PageIndex extends React.Component {
     return (
       <App>
         <Header />
-        <Page title='Home Page' />
+        <Home title='Home Page' />
       </App>
     )
   }

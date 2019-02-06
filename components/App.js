@@ -1,4 +1,4 @@
-import styles from '../css/main.css';
+import '../css/main.css';
 
 export default ({ children }) => (
   <main>
@@ -44,6 +44,5 @@ export default ({ children }) => (
         outline: none;
       }
     `}</style>
-    <style jsx global>{styles}</style>
   </main>
 )

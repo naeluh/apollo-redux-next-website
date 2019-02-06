@@ -7,30 +7,10 @@ const POSTS_PER_PAGE = 10
 
 function handleClick(event, id, url) {
   event.preventDefault()
-
-    
-    Router.beforePopState(({ url, as, options }) => {
-      // I only want to allow these two routes!
-      if (as !== "/" || as !== "/other") {
-        // Have SSR render bad routes as a 404.
-        window.location.href = as
-        return false
-      }
-
-      return true
-    });
-
-
-  // With route name and params
   Router.push({
-    pathname: `/project/${url}`,
-    asPath: `/project/${url}`
+    pathname: `/work/${url}`,
+    asPath: `/work/${url}`
   });
-
-  /*   Router.push(`/project?id=${id}`, `/project/${url}`) */
-  // With route URL
-  // Router.push(`/project/${url}`)
-  // console.log(Router)
 }
 
 function PostList({
@@ -47,7 +27,7 @@ function PostList({
           <span key={index + 1}>
             <a
               props={post._id}
-              href={`/project/${post.Data.Link}`}
+              href={`/work/${post.Data.Link}`}
               onClick={event => handleClick(event, post._id, post.Data.Link)}
             >
               {post.Title} <span>/{post.Data.Link}</span>
