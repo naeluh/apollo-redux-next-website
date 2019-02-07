@@ -1,3 +1,188 @@
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 100;
+  src: url(/_next/static/fonts/Inter-Thin-BETA-95dcd9833440639fb058f2fd5597cf8b.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-Thin-BETA-993430a02687d7531d7e95cf1ffdf74a.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 100;
+  src: url(/_next/static/fonts/Inter-ThinItalic-BETA-bab091cd421510dcc7a40ddae5f8e5f1.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-ThinItalic-BETA-03aaefeac4f93cdeb1334312d8af7f0b.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 200;
+  src: url(/_next/static/fonts/Inter-ExtraLight-BETA-3e86dd6bb8806f2b1567d8821f10d46b.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-ExtraLight-BETA-7410d5373a896ff636cbb81f6cb05f6b.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 200;
+  src: url(/_next/static/fonts/Inter-ExtraLightItalic-BETA-233a2dea7b689ca3a05150e4c56bf14b.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-ExtraLightItalic-BETA-2ab0bd663beb00d3424cdea5d21989b3.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 300;
+  src: url(/_next/static/fonts/Inter-Light-BETA-42922cef6c883e28417cfc6733f581f4.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-Light-BETA-235041efc07faa8126288ec912358690.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 300;
+  src: url(/_next/static/fonts/Inter-LightItalic-BETA-ba0b2a0c4ad90106207185d38ca13d44.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-LightItalic-BETA-7547f5c17624d09fd6a74ef1b39ef52f.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 400;
+  src: url(/_next/static/fonts/Inter-Regular-bffaed793493dc46bf0789e2275909ac.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-Regular-aebfbb3c9c7d49053fce8cadbc6e6735.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 400;
+  src: url(/_next/static/fonts/Inter-Italic-381444ec5c7d26b672bebaca791d0640.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-Italic-35cf8109301be9e5b147a09c9f103bc4.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 500;
+  src: url(/_next/static/fonts/Inter-Medium-2e5e0884f40cc3929881d89710fa432e.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-Medium-c09fb3891c96d467a92d9d898e4a931a.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 500;
+  src: url(/_next/static/fonts/Inter-MediumItalic-7a7fd73559e43715c0db3f6ff13fa108.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-MediumItalic-ad6e093cdbdede112459e8a6a1ad9563.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 600;
+  src: url(/_next/static/fonts/Inter-SemiBold-cd04cacdf531638687dd675e1d35c153.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-SemiBold-acc6eebdcdac6e62d128cc4421d0f11a.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 600;
+  src: url(/_next/static/fonts/Inter-SemiBoldItalic-57262d35e7da89546edf8741946d7ce4.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-SemiBoldItalic-569061c24342148e9b7b06484f18effc.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 700;
+  src: url(/_next/static/fonts/Inter-Bold-34356f6bf3d0f6de82656cca908803cf.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-Bold-61c493e3af34ba077777c6bb54862837.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 700;
+  src: url(/_next/static/fonts/Inter-BoldItalic-57acb4797f14814f3f3d8b5ff0dc92f5.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-BoldItalic-6fbcf86a8d4a8411d22ed510f1d72be8.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 800;
+  src: url(/_next/static/fonts/Inter-ExtraBold-a627e2ce6bb323480c7423c587e5faca.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-ExtraBold-0b03428a6dce0f51e820b76cdd53d7ec.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 800;
+  src: url(/_next/static/fonts/Inter-ExtraBoldItalic-b95f0df1c3be008c1ef3d7aaac116b1b.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-ExtraBoldItalic-137fcd98298729474c2c9d4443915679.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style:  normal;
+  font-weight: 900;
+  src: url(/_next/static/fonts/Inter-Black-c7a3bad189581d8c262882f9bea97486.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-Black-a4502329af9283216c363fb4d09b393e.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter';
+  font-style:  italic;
+  font-weight: 900;
+  src: url(/_next/static/fonts/Inter-BlackItalic-d000d76edb6507c3f11df32559cdb380.woff2) format("woff2"),
+       url(/_next/static/fonts/Inter-BlackItalic-094751f4ef58c94b676390526b5df51b.woff) format("woff");
+}
+
+/* -------------------------------------------------------
+Variable font.
+Usage:
+
+  html { font-family: 'Inter', sans-serif; }
+  @supports (font-variation-settings: normal) {
+    html { font-family: 'Inter var', sans-serif; }
+  }
+*/
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url(/_next/static/fonts/Inter-upright.var-dc162a64e0ec970871fb62b274cd447d.woff2) format("woff2 supports variations(gvar)"),
+       url(/_next/static/fonts/Inter-upright.var-dc162a64e0ec970871fb62b274cd447d.woff2) format("woff2-variations"),
+       url(/_next/static/fonts/Inter-upright.var-dc162a64e0ec970871fb62b274cd447d.woff2) format("woff2");
+}
+@font-face {
+  font-family: 'Inter var';
+  font-weight: 100 900;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url(/_next/static/fonts/Inter-italic.var-7457830229b0c7d2df2fa19a778b065c.woff2) format("woff2 supports variations(gvar)"),
+       url(/_next/static/fonts/Inter-italic.var-7457830229b0c7d2df2fa19a778b065c.woff2) format("woff2-variations"),
+       url(/_next/static/fonts/Inter-italic.var-7457830229b0c7d2df2fa19a778b065c.woff2) format("woff2");
+}
+
+
+/* --------------------------------------------------------------------------
+[EXPERIMENTAL] Multi-axis, single variable font.
+
+Slant axis is not yet widely supported (as of February 2019) and thus this
+multi-axis single variable font is opt-in rather than the default.
+
+When using this, you will probably need to set font-variation-settings
+explicitly, e.g.
+
+  * { font-variation-settings: "slnt" 0deg }
+  .italic { font-variation-settings: "slnt" 10deg }
+
+*/
+@font-face {
+  font-family: 'Inter var experimental';
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
+  src: url(/_next/static/fonts/Inter.var-6f521bf650c7bf6c92e1d6b1b9e127a6.woff2) format("woff2-variations"),
+       url(/_next/static/fonts/Inter.var-6f521bf650c7bf6c92e1d6b1b9e127a6.woff2) format("woff2");
+}
+
 /* @import 'bulma'; */
 /* Main CSS */
 html,
@@ -80,9 +265,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',
-    monospace, serif;
+    font-family: "Inter", Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
 }
 
 article,
@@ -145,6 +328,11 @@ a {
 
 a:hover {
     color: #999;
+}
+
+#weblist {
+    margin: 0 auto;
+    padding: 0;
 }
 
 #weblist>li>a {
@@ -351,12 +539,22 @@ nav>ul:active {
     background-color: #2ECC40;
 }
 
+.overlay-content {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+.overlay-content::-webkit-scrollbar { /* WebKit */
+    width: 0px;
+}
+
 .overlay-content ul {
     list-style: none;
 }
 
 .overlay-content ul li {
     opacity: 0.8;
+    margin-bottom: 0;
 }
 
 .overlay-content ul li a {
@@ -368,6 +566,7 @@ nav>ul:active {
     text-decoration: none;
     display: block;
     font-weight: 700;
+    margin-bottom: 0;
 }
 
 .overlay-content ul li:hover {
@@ -637,7 +836,6 @@ footer {
 footer div {
     width: calc(100% - 4rem);
     float: left;
-    margin-left: 2rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
@@ -991,7 +1189,7 @@ ul {
     list-style-type: circle;
 }
 
-main > section > div > ul:nth-child(26) {
+main>section>div>ul:nth-child(26) {
     -webkit-column-count: 3;
     column-count: 3;
     list-style-type: none;

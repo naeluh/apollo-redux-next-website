@@ -9,6 +9,7 @@ import App from '../../components/App'
 import Header from '../../components/Header'
 import Submit from '../../components/Submit'
 import PostList from '../../components/PostList'
+import Footer from '../../components/Footer'
 
 class BlogIndex extends React.Component {
   
@@ -21,6 +22,7 @@ class BlogIndex extends React.Component {
       <App>
         <Header />
         <PostList />
+        <Footer />
       </App>
     )
   }

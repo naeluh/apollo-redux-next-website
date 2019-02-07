@@ -1,8 +1,8 @@
 {
-  "../css/main.css": [
+  "../css/font/inter.css": [
     {
-      "id": "./css/main.css",
-      "name": "./css/main.css",
+      "id": "./css/font/inter.css",
+      "name": "./css/font/inter.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }
@@ -11,6 +11,20 @@
     {
       "id": 4,
       "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    },
+    {
+      "id": 5,
+      "name": null,
+      "file": "static/chunks/styles.js",
+      "publicPath": "static/chunks/styles.js"
+    }
+  ],
+  "../css/main.css": [
+    {
+      "id": "./css/main.css",
+      "name": "./css/main.css",
       "file": "static/chunks/styles.js",
       "publicPath": "static/chunks/styles.js"
     }

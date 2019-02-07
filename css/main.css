@@ -80,9 +80,7 @@ video {
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New',
-    monospace, serif;
+    font-family: "Inter", Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;
 }
 
 article,
@@ -145,6 +143,11 @@ a {
 
 a:hover {
     color: #999;
+}
+
+#weblist {
+    margin: 0 auto;
+    padding: 0;
 }
 
 #weblist>li>a {
@@ -351,12 +354,22 @@ nav>ul:active {
     background-color: #2ECC40;
 }
 
+.overlay-content {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+.overlay-content::-webkit-scrollbar { /* WebKit */
+    width: 0px;
+}
+
 .overlay-content ul {
     list-style: none;
 }
 
 .overlay-content ul li {
     opacity: 0.8;
+    margin-bottom: 0;
 }
 
 .overlay-content ul li a {
@@ -368,6 +381,7 @@ nav>ul:active {
     text-decoration: none;
     display: block;
     font-weight: 700;
+    margin-bottom: 0;
 }
 
 .overlay-content ul li:hover {
@@ -637,7 +651,6 @@ footer {
 footer div {
     width: calc(100% - 4rem);
     float: left;
-    margin-left: 2rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
@@ -991,7 +1004,7 @@ ul {
     list-style-type: circle;
 }
 
-main > section > div > ul:nth-child(26) {
+main>section>div>ul:nth-child(26) {
     -webkit-column-count: 3;
     column-count: 3;
     list-style-type: none;

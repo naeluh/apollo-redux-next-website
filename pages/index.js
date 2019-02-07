@@ -8,7 +8,7 @@ import { loadData } from '../lib/placeholder/actions'
 
 import App from '../components/App'
 import Header from '../components/Header'
-import Page from '../components/Page'
+import Footer from '../components/Footer'
 import Home from '../components/Home'
 
 class PageIndex extends React.Component {
@@ -32,6 +32,7 @@ class PageIndex extends React.Component {
       <App>
         <Header />
         <Home title='Home Page' />
+        <Footer />
       </App>
     )
   }
