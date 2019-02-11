@@ -16,6 +16,40 @@ function Post({ data: { error, basics } }) {
           <h1>{basic.Title}</h1>
           <ReactMarkdown source={basic.Body} />
         </div>
+        <style jsx>{`
+          * {
+            box-sizing: border-box;
+          }
+          section {
+            padding-bottom: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          li {
+            display: block;
+            margin-bottom: 10px;
+          }
+          figure {
+            align-items: center;
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+            border: 1rem solid #000;
+          }
+          a {
+            text-decoration: none;
+            padding-bottom: 0;
+            border: 0;
+            color: #000;
+            font-weight:400;
+          }
+          span {
+          }
+          ul {
+            margin: 0;
+            padding: 0;
+          }
+        `}</style>
       </section>
     )
   }

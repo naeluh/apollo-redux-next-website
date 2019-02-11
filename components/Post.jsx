@@ -5,6 +5,7 @@ import { withRouter } from 'next/router'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
+import ReactMarkdown from 'react-markdown'
 
 function Post({ data: { error, webs } }) {
   let web = webs[0]
@@ -14,11 +15,51 @@ function Post({ data: { error, webs } }) {
       <section>
         <div key={web.id}>
           <h1>{web.Title}</h1>
-          <p>{web.Description}</p>
           <figure>
             <img src={web.Image !== null ? `https://strapi.hulea.org/${web.Image.url}` : ''} />
           </figure>
+          <ReactMarkdown source={web.Description} />
         </div>
+        <style jsx>{`
+          * {
+            box-sizing: border-box;
+          }
+          section {
+            padding-bottom: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+          }
+          li {
+            display: block;
+            margin-bottom: 10px;
+          }
+          figure {
+            align-items: center;
+            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+            border: 1rem solid #000;
+          }
+          a {
+            font-size: 14px;
+            text-decoration: none;
+            padding-bottom: 0;
+            border: 0;
+            color: #000;
+            font-weight:400;
+          }
+          span {
+            font-size: 14px;
+            margin-right: 5px;
+          }
+          ul {
+            margin: 0;
+            padding: 0;
+          }
+          img {
+            object-fit: cover;
+          }
+        `}</style>
       </section>
     )
   }

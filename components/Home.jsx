@@ -42,19 +42,9 @@ class Home extends React.Component {
             Hello you have arrived at the website of Nick Hulea !
           </p>
 
-          <p>Samples of my work can be found
-            <Link prefetch href="/work">
-              <a>here</a>
-            </Link>
-            .
-          </p>
+          <p>Samples of my work can be found <Link prefetch href="/work"><a>here</a></Link>.</p>
 
-          <p>If you would like to contact me or if you have any questions click
-            <Link prefetch href="/contact">
-              <a>here</a>
-            </Link>
-            .
-          </p>
+          <p>If you would like to contact me or if you have any questions click <Link prefetch href="/contact"><a>here</a></Link>.</p>
 
         </section>
 

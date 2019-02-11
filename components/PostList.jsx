@@ -22,16 +22,17 @@ function PostList({
     const areMorePosts = false
     return (
       <section>
+        <h1>Work</h1>
+        <ul>
         {webs.map((post, index) => (
-          <span key={index + 1}>
+          <li key={index + 1}>
             <a props={post._id} href={`/work/${post.Data.Link}`} onClick={event => handleClick(event, post._id, post.Data.Link)}>
-              <figure>
-                <img src={post.Image !== null ? `https://strapi.hulea.org/${post.Image.url}` : ''} />
-              </figure>
+            <span id="image" className="imgHero" style={{ backgroundImage: `url(https://strapi.hulea.org/${post.Image.url})` }}></span>
               <h2>{post.Title}</h2>
             </a>
-          </span>
+          </li>
         ))}
+        </ul>
         {areMorePosts ? (
           <button onClick={() => loadMorePosts()}>
             {' '}
@@ -41,8 +42,13 @@ function PostList({
             ''
           )}
         <style jsx>{`
+          * {
+            box-sizing: border-box;
+          }
           section {
             padding-bottom: 20px;
+            max-width: 900px;
+            margin: 0 auto;
           }
           li {
             display: block;
@@ -50,11 +56,12 @@ function PostList({
           }
           div {
             align-items: center;
-            display: flex;
+            margin-bottom: 2rem;
+            position: relative;
+            border: 1rem solid #000;
           }
           a {
             font-size: 14px;
-            margin-right: 10px;
             text-decoration: none;
             padding-bottom: 0;
             border: 0;
@@ -62,12 +69,16 @@ function PostList({
             font-weight:400;
           }
           span {
-            font-size: 14px;
-            margin-right: 5px;
           }
           ul {
             margin: 0;
             padding: 0;
+          }
+          li {
+            align-items: center;
+            margin-bottom: 2rem;
+            position: relative;
+            border: 1rem solid #000;
           }
           button:before {
             align-self: center;
@@ -78,6 +89,17 @@ function PostList({
             height: 0;
             margin-right: 5px;
             width: 0;
+          }
+          h2 {
+            position: absolute;
+            bottom: -10px;
+            left: 10px;
+            padding: 10px 25px;
+            color: #fff;
+            background-color: #000;
+          }
+          img {
+            object-fit: cover;
           }
         `}</style>
       </section>

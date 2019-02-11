@@ -1,7 +1,8 @@
 import '../css/font/inter.css';
 import '../css/main.css';
+import Document, { Head, Main, NextScript } from 'next/document'
 
-export default ({ children }) => (
+export default ({ children, Head }) => (
   <main>
     {children}
     <style jsx global>{`
@@ -12,20 +13,25 @@ export default ({ children }) => (
         margin: 0;
         padding: 25px 50px;
       }
-      a {
-        color: #22bad9;
-      }
       p {
         font-size: 14px;
-        line-height: 24px;
+        line-height: 28px;
       }
       h1 {
         font-size: 1.5rem;
       }
+      h2 {
+        line-height: 40px;
+      }
       article {
         text-align: left;
         margin: 0;
-        max-width: 650px;
+        max-width: 900px;
+      }
+      section {
+        padding-bottom: 20px;
+        max-width: 900px;
+        margin: 0 auto;
       }
       button {
         align-items: center;
