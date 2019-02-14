@@ -159,7 +159,7 @@
       "publicPath": "static/chunks/commons.ebbaf5fd3d84e2beb923.js"
     }
   ],
-  "./../../../webpack/buildin/global.js": [
+  "./../../webpack/buildin/global.js": [
     {
       "id": 47,
       "name": "./node_modules/webpack/buildin/global.js",
@@ -655,7 +655,7 @@
       "publicPath": "static/chunks/commons.ebbaf5fd3d84e2beb923.js"
     }
   ],
-  "../../modules/_wks-ext": [
+  "./_wks-ext": [
     {
       "id": 189,
       "name": "./node_modules/core-js/library/modules/_wks-ext.js",
@@ -871,7 +871,7 @@
       "publicPath": "static/chunks/commons.ebbaf5fd3d84e2beb923.js"
     }
   ],
-  "../core-js/object/keys": [
+  "@babel/runtime-corejs2/core-js/object/keys": [
     {
       "id": 299,
       "name": "./node_modules/@babel/runtime-corejs2/core-js/object/keys.js",
