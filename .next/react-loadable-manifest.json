@@ -175,7 +175,7 @@
       "publicPath": "static/chunks/commons.ebbaf5fd3d84e2beb923.js"
     }
   ],
-  "./defineProperty": [
+  "@babel/runtime-corejs2/helpers/defineProperty": [
     {
       "id": 51,
       "name": "./node_modules/@babel/runtime-corejs2/helpers/defineProperty.js",

@@ -157,7 +157,7 @@ function (_App) {
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
-      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("style", null, "body { margin: 0 } /* custom! */"), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("meta", {
+      return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_1__["Container"], null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1.0"
       }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("meta", {
