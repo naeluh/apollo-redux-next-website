@@ -31,12 +31,11 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div>
+
+        <section className="offset60">
         <Head>
           <title>Nick Hulea</title>
         </Head>
-        <section className="offset60">
-
 
         <h1 id="title">
             Nick Hulea
@@ -49,15 +48,15 @@ class Home extends React.Component {
           <p>Samples of my work can be found <Link prefetch="true" href="/work"><a>here</a></Link>.</p>
 
           <p>If you would like to contact me or if you have any questions click <Link prefetch="true" href="/contact"><a>here</a></Link>.</p>
-
-        </section>
-
+        
         <div id="block" ref="block" style={{
           transform: 'rotate3d(1, 1, 1, ' + this.r + 'deg)',
           backgroundColor: this.color(),
           height: this.state.height,
           width: this.state.width
         }}></div>
+
+        <div className="clear"></div>
         
         <style jsx>{`
         body, #block {
@@ -68,8 +67,13 @@ class Home extends React.Component {
           top: 0;
           left: 0;
         }
+        .clear {
+          clear: both;
+          height: 75vh;
+        }
       `}</style>
-      </div>
+        </section>
+
     )
   }
 }
