@@ -1,11 +1,12 @@
 // @ts-check
 
 import React from 'react'
-import { withRouter } from 'next/router'
+import { withRouter, Router } from 'next/router'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
 import ReactMarkdown from 'react-markdown'
+import Head from 'next/head'
 
 function Post({ data: { error, webs } }) {
   let web = webs[0]
@@ -13,6 +14,9 @@ function Post({ data: { error, webs } }) {
   if (web) {
     return (
       <section>
+        <Head>
+          <title>{web.Title}</title>
+        </Head>
         <div key={web.id}>
           <h1>{web.Title}</h1>
           <figure>

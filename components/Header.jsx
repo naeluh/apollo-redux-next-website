@@ -50,8 +50,8 @@ class Header extends React.Component {
               <ul id="weblist">
                 {links.map((link, index) => (
                   <li className="bk" key={index + 1}>
-                    <Link href={link.href} prefetch >
-                      <a  onClick={this.toggleNav} href={link.href} className={pathname === link.name ? 'is-active' : ''}>{link.name}</a>
+                    <Link href={link.href} >
+                      <a prefetch="true" onClick={this.toggleNav} href={link.href} className={pathname === link.name ? 'is-active' : ''}>{link.name}</a>
                     </Link>
                   </li>
                 ))}

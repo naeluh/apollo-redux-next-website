@@ -2,6 +2,7 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { Router } from '../routes'
 import ErrorMessage from './ErrorMessage'
+import Head from 'next/head'
 
 const POSTS_PER_PAGE = 10
 
@@ -22,6 +23,9 @@ function PostList({
     const areMorePosts = false
     return (
       <section>
+        <Head>
+          <title>Work</title>
+        </Head>
         <h1>Work</h1>
         <ul>
         {webs.map((post, index) => (

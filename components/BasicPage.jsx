@@ -4,14 +4,17 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
 import ReactMarkdown from 'react-markdown'
+import Head from 'next/head'
 
 function Post({ data: { error, basics } }) {
-  console.log(basic)
   let basic = basics !== undefined ? basics[0] : ''
   if (error || basics === '') return <ErrorMessage message='Error loading blog post.' />
   if (basic) {
     return (
       <section>
+        <Head>
+          <title>{basic.Title}</title>
+        </Head>
         <div key={basic.id}>
           <h1>{basic.Title}</h1>
           <ReactMarkdown source={basic.Body} />

@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import ReactDOM from 'react-dom'
+import Head from 'next/head'
 
 class Home extends React.Component {
 
@@ -13,8 +14,8 @@ class Home extends React.Component {
     document.body.style.overflowX = "hidden";
     const client = ReactDOM.findDOMNode(this.refs['block']).getBoundingClientRect()
     this.setState(state => ({
-      height: client.height,
-      width: client.width
+      height: window.innerHeight,
+      width: window.innerWidth
     }))
   }
 
@@ -30,11 +31,14 @@ class Home extends React.Component {
 
   render() {
     return (
-      <div className="background-content">
-
+      <div>
+        <Head>
+          <title>Nick Hulea</title>
+        </Head>
         <section className="offset60">
 
-          <h1 id="title">
+
+        <h1 id="title">
             Nick Hulea
           </h1>
 
@@ -42,9 +46,9 @@ class Home extends React.Component {
             Hello you have arrived at the website of Nick Hulea !
           </p>
 
-          <p>Samples of my work can be found <Link prefetch href="/work"><a>here</a></Link>.</p>
+          <p>Samples of my work can be found <Link prefetch="true" href="/work"><a>here</a></Link>.</p>
 
-          <p>If you would like to contact me or if you have any questions click <Link prefetch href="/contact"><a>here</a></Link>.</p>
+          <p>If you would like to contact me or if you have any questions click <Link prefetch="true" href="/contact"><a>here</a></Link>.</p>
 
         </section>
 
@@ -54,9 +58,15 @@ class Home extends React.Component {
           height: this.state.height,
           width: this.state.width
         }}></div>
+        
         <style jsx>{`
-        body {
+        body, #block {
           overflow-x:hidden;
+        }
+        #block {
+          position: absolute;
+          top: 0;
+          left: 0;
         }
       `}</style>
       </div>
