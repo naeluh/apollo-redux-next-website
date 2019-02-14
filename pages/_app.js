@@ -21,6 +21,7 @@ export default class MyApp extends App {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
           <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+          <title>My new cool app</title>
         </Head>
         <Component {...pageProps} />
       </Container>
