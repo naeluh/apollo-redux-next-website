@@ -1,7 +1,7 @@
 // @ts-check
 
 import React from 'react'
-import { withRouter, Router } from 'next/router'
+import { withRouter, Router, Link } from 'next/router'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
@@ -9,7 +9,13 @@ import ReactMarkdown from 'react-markdown'
 import Head from 'next/head'
 
 function Post({ data: { error, webs } }) {
-  let web = webs[0]
+  let web = webs[0];
+  let image = web.Image !== null ? <span id="image" className="imgHero"
+    style={{
+      backgroundImage: `url(https://strapi.hulea.org/${web.Image.url})`,
+      border: `1em solid #111`,
+      marginBottom: `20px`
+    }}></span> : '';
   if (error) return <ErrorMessage message='Error loading blog post.' />
   if (web) {
     return (
@@ -19,9 +25,8 @@ function Post({ data: { error, webs } }) {
         </Head>
         <div key={web.id}>
           <h1>{web.Title}</h1>
-          <figure>
-            <img src={web.Image !== null ? `https://strapi.hulea.org/${web.Image.url}` : ''} />
-          </figure>
+          {image}
+          <a prefetch="true" target="_blank" href={web.Link}>{web.Title}</a>
           <ReactMarkdown source={web.Description} />
         </div>
         <style jsx>{`
@@ -42,19 +47,26 @@ function Post({ data: { error, webs } }) {
             display: flex;
             margin-bottom: 2rem;
             position: relative;
+          }
+          .imgHero {
             border: 1rem solid #000;
           }
           a {
-            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            word-wrap: break-word;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: -0.25px;
             text-decoration: none;
-            padding-bottom: 0;
-            border: 0;
-            color: #000;
-            font-weight:400;
+            border-bottom: dashed 1px;
+          }
+          a:hover {
+            color: #ccc;
+            border-bottom: solid 1px;
           }
           span {
-            font-size: 14px;
-            margin-right: 5px;
+            border: 1rem solid #000;
           }
           ul {
             margin: 0;
@@ -84,6 +96,7 @@ const post = gql`
       Description
       Data
       URL
+      Link
       createdAt
       updatedAt
     }

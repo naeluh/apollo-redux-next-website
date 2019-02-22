@@ -52,6 +52,9 @@ function Post({ data: { error, basics } }) {
             margin: 0;
             padding: 0;
           }
+          h4 {
+            line-height: 1.5;
+          }
         `}</style>
       </section>
     )

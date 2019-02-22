@@ -32,23 +32,23 @@ class Home extends React.Component {
   render() {
     return (
 
-        <section className="offset60">
+      <section className="offset60">
         <Head>
           <title>Nick Hulea</title>
         </Head>
 
         <h1 id="title">
-            Nick Hulea
+          Welcome!
           </h1>
 
-          <p id="description">
-            Hello you have arrived at the website of Nick Hulea !
+        <p id="description">
+          Hello you have arrived at the website of Nick Hulea !
           </p>
 
-          <p>Samples of my work can be found <Link prefetch="true" href="/work"><a>here</a></Link>.</p>
+        <p>Samples of my work can be found <Link prefetch="true" href="/work"><a>here</a></Link>.</p>
 
-          <p>If you would like to contact me or if you have any questions click <Link prefetch="true" href="/contact"><a>here</a></Link>.</p>
-        
+        <p>If you would like to contact me or if you have any questions click <Link prefetch="true" href="/contact"><a>here</a></Link>.</p>
+
         <div id="block" ref="block" style={{
           transform: 'rotate3d(1, 1, 1, ' + this.r + 'deg)',
           backgroundColor: this.color(),
@@ -57,13 +57,25 @@ class Home extends React.Component {
         }}></div>
 
         <div className="clear"></div>
-        
+
         <style jsx>{`
+        #title{
+          font-weight: 900;
+          font-size: 50px;
+          line-height: 1;
+          letter-spacing: -0.05em;
+        }
+        p {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 1.1;
+          letter-spacing: -0.03em;
+        }
         body, #block {
           overflow-x:hidden;
         }
         #block {
-          position: absolute;
+          position: fixed;
           top: 0;
           left: 0;
         }
@@ -72,7 +84,7 @@ class Home extends React.Component {
           height: 75vh;
         }
       `}</style>
-        </section>
+      </section>
 
     )
   }

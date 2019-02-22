@@ -28,14 +28,14 @@ function PostList({
         </Head>
         <h1>Work</h1>
         <ul>
-        {webs.map((post, index) => (
-          <li key={index + 1}>
-            <a props={post._id} href={`/work/${post.Data.Link}`} onClick={event => handleClick(event, post._id, post.Data.Link)}>
-            <span id="image" className="imgHero" style={{ backgroundImage: `url(https://strapi.hulea.org/${post.Image.url})` }}></span>
-              <h2>{post.Title}</h2>
-            </a>
-          </li>
-        ))}
+          {webs.map((post, index) => (
+            <li key={index + 1}>
+              <a props={post._id} href={`/work/${post.Data.Link}`} onClick={event => handleClick(event, post._id, post.Data.Link)}>
+                {post.Image !== null ? <span className="imgHero" style={{ backgroundImage: `url(https://strapi.hulea.org/${post.Image.url})` }}></span> : ''}
+                <h2>{post.Title}</h2>
+              </a>
+            </li>
+          ))}
         </ul>
         {areMorePosts ? (
           <button onClick={() => loadMorePosts()}>

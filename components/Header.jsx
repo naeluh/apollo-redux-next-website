@@ -60,15 +60,6 @@ class Header extends React.Component {
           </div>
         </div>
         <style jsx>{`
-        header {
-          position: fixed;
-          right: 100px;
-          z-index: 9999;
-          top: 0;
-        }
-        a {
-  
-        }
         .is-active {
           text-decoration: underline;
         }
