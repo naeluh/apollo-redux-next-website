@@ -7,6 +7,7 @@ import gql from 'graphql-tag'
 import ErrorMessage from './ErrorMessage'
 import ReactMarkdown from 'react-markdown'
 import Head from 'next/head'
+import PostList from './PostList'
 
 function Post({ data: { error, webs } }) {
   let web = webs[0];
@@ -19,6 +20,7 @@ function Post({ data: { error, webs } }) {
   if (error) return <ErrorMessage message='Error loading blog post.' />
   if (web) {
     return (
+      <article>
       <section>
         <Head>
           <title>{web.Title}</title>
@@ -29,7 +31,9 @@ function Post({ data: { error, webs } }) {
           <a prefetch="true" target="_blank" href={web.Link}>{web.Title}</a>
           <ReactMarkdown source={web.Description} />
         </div>
-        <style jsx>{`
+      </section>
+      <PostList title={web.URL} extraClass="worklist"></PostList>
+      <style jsx>{`
           * {
             box-sizing: border-box;
           }
@@ -55,9 +59,9 @@ function Post({ data: { error, webs } }) {
             line-height: 1.5;
             margin-bottom: 20px;
             word-wrap: break-word;
-            font-size: 15px;
+            font-size: 1.5em;
             font-weight: 600;
-            letter-spacing: -0.25px;
+            letter-spacing: -1px;
             text-decoration: none;
             border-bottom: dashed 1px;
           }
@@ -76,7 +80,7 @@ function Post({ data: { error, webs } }) {
             object-fit: cover;
           }
         `}</style>
-      </section>
+      </article>
     )
   }
   return <div>Loading</div>

@@ -14,37 +14,25 @@ function handleClick(event, id, url) {
   });
 }
 
-function PostList({
-  data: { loading, error, allPosts, _allPostsMeta, webs },
-  loadMorePosts
-}) {
+function PostList({ data: { loading, error, webs }, title, extraClass }) {
   if (error) return <ErrorMessage message='Error loading posts.' />
   if (webs && webs.length) {
-    const areMorePosts = false
     return (
-      <section>
+      <section className={extraClass}>
         <Head>
-          <title>Work</title>
+          {title === undefined ? <title>Work</title> : ''}
         </Head>
-        <h1>Work</h1>
+        {title === undefined ? <h1>Work</h1> : ''}
         <ul>
           {webs.map((post, index) => (
-            <li key={index + 1}>
+            post.URL !== title ? <li key={index + 1}>
               <a props={post._id} href={`/work/${post.Data.Link}`} onClick={event => handleClick(event, post._id, post.Data.Link)}>
                 {post.Image !== null ? <span className="imgHero" style={{ backgroundImage: `url(https://strapi.hulea.org/${post.Image.url})` }}></span> : ''}
                 <h2>{post.Title}</h2>
               </a>
-            </li>
+            </li> : ''
           ))}
         </ul>
-        {areMorePosts ? (
-          <button onClick={() => loadMorePosts()}>
-            {' '}
-            {loading ? 'Loading...' : 'Show More'}{' '}
-          </button>
-        ) : (
-            ''
-          )}
         <style jsx>{`
           * {
             box-sizing: border-box;

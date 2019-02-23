@@ -1087,7 +1087,6 @@ main>section>div>ul:nth-child(28)>li {
     margin-bottom: 0.25em;
 }
 
-
 li {
     margin-bottom: 1em;
     line-height: 1.25;
@@ -1099,4 +1098,34 @@ li {
 
 .fa {
     font-size: 12px;
+}
+
+main>article>section.worklist {
+    border-top: 1em solid #111;
+    padding-top: 1em;
+}
+
+main>article>section.worklist>ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-content: flex-start;
+}
+
+main>article>section.worklist>ul>li {
+    width: 275px;
+    border: none;
+}
+
+main>article>section.worklist>ul>li>a>h2 {
+    position: relative;
+    left: 0;
+    font-size: 1.25em;
+    bottom: 0;
+    margin: 0 auto;
+    margin-top: 0.5em;
+    padding: 0;
+    color: #222;
+    background: none;
 }

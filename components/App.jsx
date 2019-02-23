@@ -24,9 +24,7 @@ export default ({ children, Head }) => (
         line-height: 40px;
       }
       article {
-        text-align: left;
-        margin: 0;
-        max-width: 900px;
+
       }
       section {
         padding-bottom: 20px;
