@@ -24,61 +24,19 @@ function Post({ data: { error, webs } }) {
       <section>
         <Head>
           <title>{web.Title}</title>
+          <meta name="title" content={web.Title}></meta>
+          <meta name="description" content={web.Description}></meta>
         </Head>
         <div key={web.id}>
           <h1>{web.Title}</h1>
           {image}
-          <a prefetch="true" target="_blank" href={web.Link}>{web.Title}</a>
+          <a className="dash-link" prefetch="true" target="_blank" href={web.Link}>{web.Title}</a>
           <ReactMarkdown source={web.Description} />
         </div>
       </section>
       <PostList title={web.URL} extraClass="worklist"></PostList>
       <style jsx>{`
-          * {
-            box-sizing: border-box;
-          }
-          section {
-            padding-bottom: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-          }
-          li {
-            display: block;
-            margin-bottom: 10px;
-          }
-          figure {
-            align-items: center;
-            display: flex;
-            margin-bottom: 2rem;
-            position: relative;
-          }
-          .imgHero {
-            border: 1rem solid #000;
-          }
-          a {
-            line-height: 1.5;
-            margin-bottom: 20px;
-            word-wrap: break-word;
-            font-size: 1.5em;
-            font-weight: 600;
-            letter-spacing: -1px;
-            text-decoration: none;
-            border-bottom: dashed 1px;
-          }
-          a:hover {
-            color: #ccc;
-            border-bottom: solid 1px;
-          }
-          span {
-            border: 1rem solid #000;
-          }
-          ul {
-            margin: 0;
-            padding: 0;
-          }
-          img {
-            object-fit: cover;
-          }
+
         `}</style>
       </article>
     )

@@ -14,6 +14,8 @@ function Post({ data: { error, basics } }) {
       <section>
         <Head>
           <title>{basic.Title}</title>
+          <meta name="title" content={basic.Title}></meta>
+          <meta name="description" content={basic.Body}></meta>
         </Head>
         <div key={basic.id}>
           <h1>{basic.Title}</h1>

@@ -20,7 +20,13 @@ function PostList({ data: { loading, error, webs }, title, extraClass }) {
     return (
       <section className={extraClass}>
         <Head>
-          {title === undefined ? <title>Work</title> : ''}
+          {title === undefined ? 
+          <>
+          <title>Work</title> 
+          <meta name="title" content="Nick Hulea's Work and Projects"></meta>
+          <meta name="description" content="Nick Hulea's Work and Projects"></meta>
+          </>
+          : ''}
         </Head>
         {title === undefined ? <h1>Work</h1> : ''}
         <ul>
@@ -42,45 +48,17 @@ function PostList({ data: { loading, error, webs }, title, extraClass }) {
             max-width: 900px;
             margin: 0 auto;
           }
-          li {
-            display: block;
-            margin-bottom: 10px;
-          }
-          div {
-            align-items: center;
-            margin-bottom: 2rem;
-            position: relative;
-            border: 1rem solid #000;
-          }
           a {
-            font-size: 14px;
-            text-decoration: none;
-            padding-bottom: 0;
-            border: 0;
-            color: #000;
-            font-weight:400;
-          }
-          span {
+            position: relative;
           }
           ul {
             margin: 0;
             padding: 0;
+            list-style: none;
           }
           li {
-            align-items: center;
-            margin-bottom: 2rem;
-            position: relative;
-            border: 1rem solid #000;
-          }
-          button:before {
-            align-self: center;
-            border-style: solid;
-            border-width: 6px 4px 0 4px;
-            border-color: #ffffff transparent transparent transparent;
-            content: '';
-            height: 0;
-            margin-right: 5px;
-            width: 0;
+            border: 1rem solid #111;
+            margin-bottom: 2em;
           }
           h2 {
             position: absolute;
@@ -88,10 +66,7 @@ function PostList({ data: { loading, error, webs }, title, extraClass }) {
             left: 10px;
             padding: 10px 25px;
             color: #fff;
-            background-color: #000;
-          }
-          img {
-            object-fit: cover;
+            background-color: #111;
           }
         `}</style>
       </section>

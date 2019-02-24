@@ -35,6 +35,8 @@ class Home extends React.Component {
       <section className="offset60">
         <Head>
           <title>Nick Hulea</title>
+          <meta name="title" content="Nick Hulea's Website!"></meta>
+          <meta name="description" content="Nick Hulea's Website!"></meta>
         </Head>
 
         <h1 id="title">
@@ -45,9 +47,9 @@ class Home extends React.Component {
           Hello you have arrived at the website of Nick Hulea !
           </p>
 
-        <p>Samples of my work can be found <Link prefetch="true" href="/work"><a>here</a></Link>.</p>
+        <p>Samples of my work can be found <Link href="/work"><a prefetch="true">here</a></Link>.</p>
 
-        <p>If you would like to contact me or if you have any questions click <Link prefetch="true" href="/contact"><a>here</a></Link>.</p>
+        <p>If you would like to contact me or if you have any questions click <Link href="/contact"><a prefetch="true">here</a></Link>.</p>
 
         <div id="block" ref="block" style={{
           transform: 'rotate3d(1, 1, 1, ' + this.r + 'deg)',

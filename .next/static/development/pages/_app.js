@@ -9746,7 +9746,7 @@ function (_App) {
         name: "viewport",
         content: "width=device-width, initial-scale=1.0"
       }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("meta", {
-        "http-equiv": "X-UA-Compatible",
+        httpEquiv: "X-UA-Compatible",
         content: "IE=edge"
       })), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Component, pageProps));
     }
