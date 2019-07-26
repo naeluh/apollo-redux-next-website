@@ -2,7 +2,6 @@ import App from '../components/App'
 import Header from '../components/Header'
 import Page from '../components/BasicPage'
 import withApollo from '../lib/withApollo'
-import withReduxSaga from '../lib/withReduxSaga'
 import Footer from '../components/Footer'
 
 class About extends React.Component {
@@ -17,4 +16,4 @@ class About extends React.Component {
   }
 }
 
-  export default withReduxSaga(withApollo(About))
+export default withApollo(About)

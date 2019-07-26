@@ -1,0 +1,1 @@
+{"ast":null,"code":"\"use strict\";\n\n/**\n * Parameterized Routing with next-route\n *\n * Benefits: Less code, and easily handles complex url structures\n **/\nvar routes = module.exports = require('next-routes')();\n\nroutes.add('work/entry', '/work/:url');","map":null,"metadata":{},"sourceType":"script"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export var actionTypes = {\n  COUNT_INCREASE: 'COUNT_INCREASE',\n  COUNT_DECREASE: 'COUNT_DECREASE'\n};\nexport function countIncrease() {\n  return {\n    type: actionTypes.COUNT_INCREASE\n  };\n}\nexport function countDecrease() {\n  return {\n    type: actionTypes.COUNT_DECREASE\n  };\n}","map":null,"metadata":{},"sourceType":"module"}

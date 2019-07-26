@@ -1,0 +1,73 @@
+{
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--6-1!css/main.css": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--6-1!css/font/inter.css": [
+    {
+      "modules": {
+        "byIdentifier": {},
+        "usedIds": {}
+      },
+      "chunks": {
+        "byName": {
+          "mini-css-extract-plugin": 0
+        },
+        "bySource": {},
+        "usedIds": [
+          0
+        ]
+      }
+    }
+  ],
+  "modules": {
+    "byIdentifier": {
+      "css node_modules/css-loader/index.js??ref--6-1!css/font/inter.css 0": 0,
+      "css node_modules/css-loader/index.js??ref--6-1!css/main.css 0": 1
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1
+    }
+  },
+  "chunks": {
+    "byName": {
+      "commons": 0,
+      "static/runtime/webpack.js": 1,
+      "static/JN9jQyeBLIP6_H7gONOLY/pages/_app.js": 2,
+      "static/JN9jQyeBLIP6_H7gONOLY/pages/_error.js": 3,
+      "static/JN9jQyeBLIP6_H7gONOLY/pages/about.js": 4,
+      "static/JN9jQyeBLIP6_H7gONOLY/pages/contact.js": 5,
+      "static/JN9jQyeBLIP6_H7gONOLY/pages/index.js": 6,
+      "static/JN9jQyeBLIP6_H7gONOLY/pages/work.js": 7,
+      "static/JN9jQyeBLIP6_H7gONOLY/pages/work/entry.js": 8,
+      "static/runtime/main.js": 9
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

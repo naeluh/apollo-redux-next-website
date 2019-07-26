@@ -1,0 +1,1 @@
+{"ast":null,"code":"import { combineReducers } from 'redux';\nimport clock from './clock/reducers';\nimport count from './count/reducers';\nimport placeholder from './placeholder/reducers';\nexport default combineReducers({\n  clock: clock,\n  count: count,\n  placeholder: placeholder\n});","map":null,"metadata":{},"sourceType":"module"}
